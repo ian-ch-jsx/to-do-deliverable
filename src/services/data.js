@@ -41,7 +41,7 @@ export async function addTask(task) {
 }
 
 export async function completeTask(id, is_complete) {
-  const resp = await client.from('todos').delete.match({ id });
+  const resp = await client.from('todos').update({ is_complete }).match({ id });
   return checkError(resp);
 }
 
