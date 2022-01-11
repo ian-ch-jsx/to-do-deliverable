@@ -19,7 +19,7 @@ export default function Auth({ setCurrentUser }) {
       }
       setCurrentUser(resp);
     } catch (error) {
-      setError('An error has ocurred. Please try again.');
+      setError('An error has occurred. Please try again.');
     }
   };
   return (
