@@ -18,6 +18,7 @@ function App() {
             {currentUser && (
               <div className="main">
                 <ToDo />
+                <h1>logged in</h1>
               </div>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}

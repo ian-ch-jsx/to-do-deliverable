@@ -9,6 +9,7 @@ export default function Auth({ setCurrentUser }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       let resp;
       if (type === 'signin') {

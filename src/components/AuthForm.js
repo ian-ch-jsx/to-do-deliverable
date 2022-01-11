@@ -5,9 +5,8 @@ export default function AuthForm({ email, setEmail, password, setPassword, error
     <>
       <div className="error"> {error && <p>{error}</p>}</div>
       <div className="auth-container">
-        <h1>Log in / sign up</h1>
-        <form className="form">
-          <div className="form-controls" onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
+          <div className="form-controls">
             <label>email</label>
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
