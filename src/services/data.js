@@ -26,7 +26,7 @@ export async function logout() {
 }
 
 export async function getTasks() {
-  const resp = await client.from('todos').select('*', [{ user_id: client.auth.user().id }]);
+  const resp = await client.from('todos').select('*');
   return checkError(resp);
 }
 
