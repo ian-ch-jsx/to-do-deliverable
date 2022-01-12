@@ -19,6 +19,10 @@ export default function ToDo() {
     }
   };
 
+  // const handleChange = async () => {
+  //   console.log('I hate this');
+  // };
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await getTasks();

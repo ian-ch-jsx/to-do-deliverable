@@ -23,7 +23,7 @@ function App() {
             {currentUser && (
               <div className="main">
                 <ToDo />
-                <button onClick={logoutUser}>Log Out</button>
+                <button onClick={logoutUser}>logout</button>
               </div>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}
