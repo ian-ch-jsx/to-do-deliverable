@@ -21,3 +21,12 @@
   width: 300px;
   padding: 20px;
 }
+.delete {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete:hover {
+  color: black;
+}

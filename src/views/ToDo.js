@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import AddTask from '../components/AddTask';
 import TaskList from '../components/TaskList';
-import { addTask, getTasks, completeTask } from '../services/data';
+import { addTask, getTasks, completeTask, deleteTask } from '../services/data';
 import './ToDo.css';
 
 export default function ToDo() {
@@ -26,7 +26,13 @@ export default function ToDo() {
     await completeTask(task.id, !task.is_complete);
     const resp = await getTasks();
     setTasks(resp);
-    console.log(resp);
+  };
+
+  const removeTask = async (task) => {
+    await deleteTask(task.id);
+    setNewTask('');
+    const updatedList = await getTasks();
+    setTasks(updatedList);
   };
 
   useEffect(() => {
@@ -42,7 +48,7 @@ export default function ToDo() {
       <div className="to-do-container">
         {tasks.map((item) => (
           <div key={item.id}>
-            <TaskList task={item} handleChange={handleChange} />
+            <TaskList task={item} handleChange={handleChange} removeTask={removeTask} />
           </div>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
+import classNames from 'classnames';
 
-export default function TaskList({ task, handleChange }) {
+export default function TaskList({ task, handleChange, removeTask }) {
   return (
     <div className="to-do-item">
       <input
@@ -9,7 +10,12 @@ export default function TaskList({ task, handleChange }) {
         checked={task.is_complete}
         onChange={() => handleChange(task)}
       />
-      <label htmlFor={task.id}>{task.task}</label>
+      <label htmlFor={task.id}>
+        {task.task}{' '}
+        <a value={task.id} onClick={() => removeTask(task)} className={classNames('delete')}>
+          x
+        </a>
+      </label>
     </div>
   );
 }
