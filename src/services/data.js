@@ -41,11 +41,7 @@ export async function addTask(task) {
 }
 
 export async function completeTask(id, is_complete) {
-  const resp = await client
-    .from('todos')
-    .select('*', [{ user_id: client.auth.user().id }])
-    .match({ id })
-    .update({ is_complete });
+  const resp = await client.from('todos').update({ is_complete }).eq('id', id);
   return checkError(resp);
 }
 
