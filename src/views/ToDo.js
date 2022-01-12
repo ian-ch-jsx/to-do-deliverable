@@ -8,7 +8,6 @@ export default function ToDo() {
   const [newTask, setNewTask] = useState('');
   const [error, setError] = useState('');
   const [tasks, setTasks] = useState([]);
-  // const [complete, setComplete] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
