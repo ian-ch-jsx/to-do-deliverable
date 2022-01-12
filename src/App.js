@@ -1,12 +1,17 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { useState } from 'react';
-import { getUser } from './services/data';
+import { getUser, logout } from './services/data';
 import ToDo from './views/ToDo';
 import Auth from './views/Auth';
 import './App.css';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
+  const logoutUser = async () => {
+    await logout();
+    setCurrentUser(null);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +23,7 @@ function App() {
             {currentUser && (
               <div className="main">
                 <ToDo />
-                <h1>logged in</h1>
+                <button onClick={logoutUser}>Log Out</button>
               </div>
             )}
             {!currentUser && <Auth setCurrentUser={setCurrentUser} />}

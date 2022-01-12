@@ -7,7 +7,7 @@ export default function AddTask({ newTask, setNewTask, handleSubmit }) {
         <div className="form-controls">
           <label>add task: </label>
           <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
-          <input type="submit" className="submit-btn"></input>
+          <button onClick={handleSubmit}>add task</button>
         </div>
       </form>
     </div>

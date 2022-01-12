@@ -1,9 +1,10 @@
 import React from 'react';
 
-export default function TaskList({ task }) {
+export default function TaskList({ task, id }) {
   return (
     <div className="to-do-container">
-      <h3>{task}</h3>
+      <input type="checkbox" value={id} />
+      <label htmlFor={id}>{task}</label>
     </div>
   );
 }
