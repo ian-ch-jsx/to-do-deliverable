@@ -1,0 +1,23 @@
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.to-do-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 10px 0;
+  justify-content: left;
+  width: 300px;
+}
+
+.add-task {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 300px;
+  padding: 20px;
+}

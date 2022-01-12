@@ -13,8 +13,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      <header className="header">
         <h1>To-do list</h1>
       </header>
       <BrowserRouter>
@@ -30,7 +30,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

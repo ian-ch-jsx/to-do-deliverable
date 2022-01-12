@@ -1,0 +1,60 @@
+.auth-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 250px;
+}
+
+.form-tabs {
+  display: flex;
+  justify-content: center;
+  margin: auto auto 0px auto;
+}
+
+.form-tabs h3 {
+  color: #55615c;
+  padding-right: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.form-tabs h3.active {
+  color: #009fb7;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.submit-btn {
+  border: 0px;
+  background-color: #272727;
+  padding: 5px;
+  color: #fefefe;
+  border-radius: 20px;
+  margin: 0px 70px 0px 70px;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #009fb7;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+.error {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}

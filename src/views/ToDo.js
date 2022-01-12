@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import AddTask from '../components/AddTask';
 import TaskList from '../components/TaskList';
 import { addTask, getTasks } from '../services/data';
+import './ToDo.css';
 
 export default function ToDo() {
   const [newTask, setNewTask] = useState('');
@@ -27,8 +28,8 @@ export default function ToDo() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <>
+      <div className="to-do-container">
         {tasks.map((item) => (
           <div key={item.id}>
             <TaskList {...item} />
@@ -41,6 +42,6 @@ export default function ToDo() {
         setNewTask={setNewTask}
         handleSubmit={handleSubmit}
       />
-    </div>
+    </>
   );
 }
